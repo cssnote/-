@@ -1,3 +1,5 @@
+// 参考文章：https://juejin.im/post/6844903618764603399
+
 var util = {
 	ajax: function(options){
 		//处理默认值
