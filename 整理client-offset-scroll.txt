@@ -4,7 +4,7 @@ client
 
 
 
-offset
+#offset
 
 offsetWidth/offsetHeight
 1、offsetWidth = 元素的clientWidth + padding + border  + 滚动条宽度，（有滚动条时，clientWidth是设置的宽度-滚动条宽度，getComputedStyle一样）
