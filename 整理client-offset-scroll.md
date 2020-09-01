@@ -26,4 +26,4 @@ clientTop获取border-top大小，clientLeft获取border-left大小。
 
 二、一般情况都是body无border margin、html根元素无margin border padding的情况，就无须理会上述的问题了。
 
-三、如果元素的最近的父元素有定位，则偏移量是基于这个offsetParent，计算距离从元素的外边框到offsetParent的内边框，元素的margin + 中间元素的所有宽度 + offsetParent的padding.
+三、如果元素的最近的父元素有定位，则偏移量是基于这个offsetParent，计算距离从元素的外边框到offsetParent的内边框，元素的margin + 中间元素的所有宽度即offsetWidth + offsetParent的padding.
