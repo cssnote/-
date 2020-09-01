@@ -1,7 +1,7 @@
 
 # client
 ## clientWidth/clientHeight
-1、元素无padding无滚动：clientWidth = 元素的css宽度
+1、元素无padding无滚动：clientWidth = 元素的css宽度 <br>
 2、元素有padding无滚动：clientWidth = 元素的css宽度+ padding
 3、元素有padding有滚动条时，clientWidth = css的width - 滚动条宽度 + padding。
 
