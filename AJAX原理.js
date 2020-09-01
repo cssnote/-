@@ -10,6 +10,7 @@ var util = {
 			data = options.data || null;
 			parms = ''; //url参数
 			callback = options.success; //请求成功后调用的函数
+			error = option.error;
 
 		//如果data存在，数据参数拼接一起。
 		if(data){
@@ -77,6 +78,8 @@ var util = {
 				if(xhr.status >= 200 && xhr.status < 300 || xhr.status === 304){
 					
 					callback && callback(JSON.parse(xhr.responseText)); 
+				}else{
+					error && error();
 				}
 	
 			}
