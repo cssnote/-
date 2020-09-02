@@ -1,22 +1,22 @@
 
 # client
 ## clientWidth/clientHeight  (padding + content）
-1、元素无padding无滚动：clientWidth = style.width <br>
-2、元素有padding无滚动：clientWidth = style.width + padding
+1、元素无padding无滚动：clientWidth = style.width  
+2、元素有padding无滚动：clientWidth = style.width + padding  
 3、元素有padding有滚动条时，clientWidth = css设置width - 滚动条宽度 + padding / 计算后样式宽度getComputedStyle().width + padding。
 
 ## clientLeft / clientTop
-clientTop获取border-top大小，clientLeft获取border-left大小。
+clientTop获取border-top的border-width，clientLeft获取border-left的border-width。
 
 
 # offset
 
 ## offsetWidth/offsetHeight （border + padding + content)
-1、元素无padding无border无滚动: offsetWidth = clientWidth = style.width。
-2、元素有padding有border无滚动：offsetWidth = clientWidth + border。
-3、元素有padding有border有滚动：offsetWidth = clientWidth + border + 滚动条宽度。
+1、元素无padding无border无滚动: offsetWidth = clientWidth = style.width。  
+2、元素有padding有border无滚动：offsetWidth = clientWidth + border。  
+3、元素有padding有border有滚动：offsetWidth = clientWidth + border + 滚动条宽度。  
 
-2、但body的offsetWidth是不包含浏览器的滚动条，原因是浏览器滚动条是属于window对象的范畴，和document没一点联系。
+2、但body的offsetWidth是不包含浏览器的滚动条，原因是浏览器滚动条是属于window对象的范畴，和document没一点联系。  
 如果html根节点有padding border，要获取页面总宽度则需要用html的offsetWidth： document.documentElement.offsetWidth。
 
 ## offsetLeft/offsetTop
