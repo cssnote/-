@@ -22,10 +22,19 @@ clientTop获取border-top的border-width，clientLeft获取border-left的border-
 ## offsetLeft / offsetTop
 
 #### 一般情况(body无border margin、html根元素无margin border padding的情况）
-元素距离最近的父元素有定位（非static)，则偏移量是基于这个offsetParent，计算距离从元素的外边框到offsetParent的内边框，元素的margin + 中间元素的所有宽度即offsetWidth + offsetParent的padding.
+元素距离最近的父元素有定位（非static)，则偏移量是基于这个offsetParent，offsetWidth = 元素的外边框到offsetParent的内边框,即：offsetParent的padding-left + 中间元素的margin-left,border-width,padding-left + 元素的margin-left
 
 #### 较极端情况：(body有border margin、html根元素有margin border padding的情况）
-  1、元素的父元素都没有定位的情况下，offsetLeft实际计算的偏移量是从元素的外边框（不含border）到html根元素边框（含border）的距离，包含了body的padding/margin/border,html根元素的padding/border,但不包含html的margin（ie8及以上包含html节点的margin）.  
+1、元素的父元素都没有定位的情况下，offsetLeft实际计算的偏移量是从元素的外边框（不含border）到html根元素边框（含border）的距离，包含了body的padding/margin/border,html根元素的padding/border,但不包含html的margin（ie8及以上包含html节点的margin）.  
 2、但是如果html或者body设置了定位（relative/position/fixed），则计算到html和body这两个offsetParent的border（含border）,IE8及以上版本不含border。  
+
+
+# scroll
+## scrollWidth / scrollHeight
+元素无滚动：scrollHeight = clientHeight
+元素有滚动: scrollHeight = 滚动内部区域实际整体高度（包括padding）
+
+## scrollTop / scrollLeft
+拉动滚动条时，滚动条卷去的高度和宽度，可以设置值，最小值是0，就是没拉到滚动条的默认状态，最大值是拉到底的值，设置超出值只能到最小值最大值。
 
 
