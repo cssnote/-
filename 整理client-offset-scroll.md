@@ -21,10 +21,10 @@ clientTop获取border-top的border-width，clientLeft获取border-left的border-
 
 ## offsetLeft / offsetTop
 
-#### 一、一般情况(body无border margin、html根元素无margin border padding的情况）
+#### 一般情况(body无border margin、html根元素无margin border padding的情况）
 元素距离最近的父元素有定位（非static)，则偏移量是基于这个offsetParent，计算距离从元素的外边框到offsetParent的内边框，元素的margin + 中间元素的所有宽度即offsetWidth + offsetParent的padding.
 
-#### 一、较极端情况：  
+#### 较极端情况：(body有border margin、html根元素有margin border padding的情况）
   1、元素的父元素都没有定位的情况下，offsetLeft实际计算的偏移量是从元素的外边框（不含border）到html根元素边框（含border）的距离，包含了body的padding/margin/border,html根元素的padding/border,但不包含html的margin（ie8及以上包含html节点的margin）.  
 2、但是如果html或者body设置了定位（relative/position/fixed），则计算到html和body这两个offsetParent的border（含border）,IE8及以上版本不含border。  
 
